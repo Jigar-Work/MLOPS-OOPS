@@ -1,3 +1,5 @@
+import time
+
 class facebook:
     def __init__(self):
         self.menu()
@@ -25,6 +27,7 @@ class facebook:
             self.message_friend()
         else:   
             print("Exiting...")
+            time.sleep(1)
             exit()
 
     def signup(self):
