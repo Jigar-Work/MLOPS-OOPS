@@ -1,12 +1,27 @@
 import time
 
 class facebook:
+
+    _user_id = 1
+
     def __init__(self):
-        self.menu()
-        self.username = ""
+        # self.menu()
+        self.id = facebook._user_id
+        facebook._user_id += 1
+        self.__username = "Default User" #Encapsulation
         self.password = ""
         self.logged_in = False
     
+    @staticmethod
+    def get_id():
+        return facebook._user_id
+    
+    @staticmethod
+    def set_id(value):
+        facebook._user_id = value
+
+
+
     def menu(self):
         num = input("""
                     Welcome to Facebook!, please select an option:
@@ -71,4 +86,4 @@ class facebook:
         
 
     
-a1 = facebook()
+# a1 = facebook()
